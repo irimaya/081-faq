@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Root */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  background-color: #fbfbfb;
+}
+
+h1 {
+  margin: 50px 0 30px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.logo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+.lead {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: 0px;
+  font-weight: 100;
+  font-size: 17.5px;
+  color: #555;
+  overflow: hidden;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq {
+  background-color: #fff;
+  /* border: 1px solid #9fa4a8; */
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before, 
+.faq.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: #3498db;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+  color: #777;
+  font-weight: 500;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+  color: #777;
+  font-weight: lighter;
+
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-toggle:focus {
+  outline: 0;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: #fff;
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #7fdee0;
+}
+
+.fa-chevron-down {
+  color: #7fdee0;
+}
+
+/* Media Querie */
+@media(max-width: 800px) {
+  .lead {
+    width: 100%;
+    /* margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    font-weight: 100;
+    font-size: 17.5px;
+    color: #555;
+    overflow: hidden; */
+  }
+}
